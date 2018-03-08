@@ -1,7 +1,18 @@
 /*
+题目描述：输入一个链表，从尾到头打印链表每个节点的值。
 面试小提示：在面试中如果我们打算修改输入的数据，最好先问面试官是不是允许做修改
 */
-
+/**
+*    public class ListNode {
+*        int val;
+*        ListNode next = null;
+*
+*        ListNode(int val) {
+*            this.val = val;
+*        }
+*    }
+*
+*/
 // version 1: use stack (last-in first-out)
 import java.util.ArrayList;
 import java.util.Stack;
