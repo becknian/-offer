@@ -22,8 +22,24 @@ public class Solution {
         return result;
     }
 }
+// version 2: use recursion, do not need extra space and do not change the input ListNode (best solution)
+public class Solution {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        ArrayList<Integer> result = new ArrayList<>();
+        helper(listNode, result);
+        return result;
+    }
+    private void helper(ListNode node, ArrayList<Integer> result){
+        if (node == null){
+            return;
+        }
+        helper(node.next, result);
+        result.add(node.val);
+    }
+}
 
-// version 2: inplace but will change the input ListNode
+
+// version 3: inplace but will change the input ListNode
 public class Solution {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ListNode prev = null;
