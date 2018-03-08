@@ -14,6 +14,7 @@
 *
 */
 // version 1: use stack (last-in first-out)
+// 优点：鲁棒性好
 import java.util.ArrayList;
 import java.util.Stack;
 public class Solution {
@@ -33,7 +34,8 @@ public class Solution {
         return result;
     }
 }
-// version 2: use recursion, do not need extra space and do not change the input ListNode (best solution)
+// version 2: use recursion, do not need extra space and do not change the input ListNode
+// 缺点：当链表非常长的时候，会导致函数调用的层级很深，从而有可能导致栈溢出。
 public class Solution {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer> result = new ArrayList<>();
