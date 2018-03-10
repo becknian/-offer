@@ -45,7 +45,7 @@ public class Solution {
                 node = node.next;
             }
             node.next = null;
-        } else { // otherwise, we can delete the node in O(1) time
+        } else { // otherwise, we can delete the node in O(1) time. This is based on an assumption that the node we want to delete is in the list.
             ListNode next = node.next;
             node.val = next.val;
             node.next = next.next;
