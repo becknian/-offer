@@ -19,6 +19,7 @@ public class Solution {
      * @param n: the power number
      * @return: the result
      */
+    // the input is invalid when base=0 and exponent<=0. We can check its value to find if the input is valid or not
     public boolean invalidInput = false; 
     public double myPow(double base, int exponent) {
         // write your code here
